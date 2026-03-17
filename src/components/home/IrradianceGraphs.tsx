@@ -206,11 +206,11 @@ const IrradianceGraphs: React.FC = () => {
             <span className="gradient-text">Energy Yield</span>
           </h2>
           <p className="section-subheading mx-auto text-gray-400">
-            SOLTRAK tracks solar irradiance and energy generation simultaneously across your entire portfolio — giving you instant visibility into performance deviations.
+            SOLTRAK tracks solar irradiance and energy generation simultaneously across your entire portfolio, giving you instant visibility into performance deviations.
           </p>
-          <p className="mt-3 text-gray-600 text-xs">
+          {/* <p className="mt-3 text-gray-600 text-xs">
             Data updates every 5 seconds · Numbers are illustrative
-          </p>
+          </p> */}
         </motion.div>
 
         <div className="grid grid-cols-1 tablet:grid-cols-3 gap-6">
