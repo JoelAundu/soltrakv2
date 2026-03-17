@@ -1,0 +1,159 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  html {
+    scroll-behavior: auto;
+  }
+
+  body {
+    @apply font-sans antialiased;
+    @apply bg-white text-gray-900;
+    @apply dark:bg-[#0a1628] dark:text-white;
+    overflow-x: hidden;
+  }
+
+  ::selection {
+    background: rgba(23, 104, 161, 0.3);
+    color: #1768a1;
+  }
+}
+
+@layer components {
+  .container-custom {
+    @apply max-w-7xl mx-auto px-4 tablet:px-8 desktop:px-12;
+  }
+
+  .section-padding {
+    @apply py-20 tablet:py-28;
+  }
+
+  .btn-primary {
+    @apply inline-flex items-center gap-2 px-6 py-3 bg-[#1768a1] text-white rounded-lg font-semibold
+           hover:bg-[#1E81C6] transition-all duration-300 hover:shadow-lg
+           hover:-translate-y-0.5 active:translate-y-0;
+  }
+
+  .btn-outline {
+    @apply inline-flex items-center gap-2 px-6 py-3 border-2 border-[#1768a1] text-[#1768a1] rounded-lg font-semibold
+           hover:bg-[#1768a1] hover:text-white transition-all duration-300 hover:-translate-y-0.5 active:translate-y-0;
+  }
+
+  .btn-outline-white {
+    @apply inline-flex items-center gap-2 px-6 py-3 border-2 border-white text-white rounded-lg font-semibold
+           hover:bg-white hover:text-[#0a1628] transition-all duration-300 hover:-translate-y-0.5 active:translate-y-0;
+  }
+
+  .card {
+    @apply bg-white dark:bg-gray-900 rounded-2xl shadow-lg border border-gray-100 dark:border-gray-800;
+  }
+
+  .gradient-text {
+    background: linear-gradient(135deg, #1768a1, #72BCBF);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .section-heading {
+    @apply text-3xl tablet:text-4xl desktop:text-5xl font-bold;
+  }
+
+  .section-subheading {
+    @apply text-lg text-gray-600 dark:text-gray-400 max-w-2xl;
+  }
+}
+
+/* Trusted By Carousel */
+@keyframes scroll-trusted {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.animate-scroll-trusted {
+  animation: scroll-trusted 30s linear infinite;
+}
+
+.trusted-track:hover .animate-scroll-trusted {
+  animation-play-state: paused;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(23, 104, 161, 0.4);
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(23, 104, 161, 0.7);
+}
+
+/* Lenis smooth scroll */
+html.lenis, html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+/* Three.js canvas */
+canvas {
+  display: block;
+}
+
+/* Portfolio progress bar */
+@keyframes portfolio-progress {
+  from { width: 0%; }
+  to { width: 100%; }
+}
+
+/* Navbar glass blur */
+.navbar-glass {
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+/* Hide scrollbar utility */
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+/* Shimmer effect for skeleton loaders */
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+/* Float animation */
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-12px); }
+}
+
+.animate-float {
+  animation: float 4s ease-in-out infinite;
+}
