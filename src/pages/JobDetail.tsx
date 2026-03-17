@@ -18,17 +18,6 @@ const BulletItem = ({ text }: { text: string }) => (
   </li>
 );
 
-const typeBadge: Record<string, string> = {
-  'Full Time': 'bg-[#1768a1]/10 text-[#1768a1] border-[#1768a1]/20',
-  'Part Time': 'bg-orange-50 text-orange-600 border-orange-200',
-  Contract:   'bg-purple-50 text-purple-700 border-purple-200',
-  Internship: 'bg-green-50 text-green-700 border-green-200',
-};
-const workspaceBadge: Record<string, string> = {
-  Remote:   'bg-green-50 text-green-700 border-green-200',
-  Hybrid:   'bg-purple-50 text-purple-700 border-purple-200',
-  'On-site':'bg-gray-100 text-gray-700 border-gray-200',
-};
 
 const JobDetail: React.FC = () => {
   const { id } = useParams<{ id: string }>();
