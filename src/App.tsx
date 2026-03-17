@@ -13,6 +13,7 @@ import Home from './pages/Home';
 import AboutUs from './pages/AboutUs';
 import GettingStarted from './pages/GettingStarted';
 import Career from './pages/Career';
+import JobDetail from './pages/JobDetail';
 import FAQs from './pages/FAQs';
 import PrivacyPolicy from './pages/PrivacyPolicy';
 
@@ -61,6 +62,7 @@ function AppContent() {
         <Route path="/about" element={<AboutUs />} />
         <Route path="/getting-started" element={<GettingStarted />} />
         <Route path="/career" element={<Career />} />
+        <Route path="/career/:id" element={<JobDetail />} />
         <Route path="/faqs" element={<FAQs />} />
         <Route path="/privacy-policy" element={<PrivacyPolicy />} />
       </Routes>
