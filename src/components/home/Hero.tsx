@@ -152,7 +152,7 @@ const Hero: React.FC = () => {
             ref={subtitleRef}
             className="mt-6 text-lg tablet:text-xl text-gray-400 max-w-2xl leading-relaxed"
           >
-            Africa's leading solar asset performance monitoring platform. Independent verification, real-time visibility, and investor-grade reporting — all in one place.
+            Africa's leading solar asset performance monitoring platform. Independent verification, real-time visibility, and investor-grade reporting, all in one place.
           </p>
 
           <div ref={ctaRef} className="mt-10 flex flex-wrap items-center gap-4">
